@@ -1,6 +1,6 @@
 === WP Nav Plus ===
 Contributors: mattkeys
-Tags: menu, wp_nav_menu, wp_nav_plus, start_depth, start depth, starting_depth, starting depth, split menu, tertiary menu, secondary menu, divided menu, limit, offset, columns, segment, menu segment
+Tags: split menu, start depth, divided menu, tertiary menu, start_depth, wp_nav_menu, wp_nav_plus, start_depth, starting_depth, starting depth, secondary menu, limit, offset, columns, segment, menu segment
 Requires at least: 3.0.1
 Tested up to: 4.8
 Stable tag: trunk
