@@ -11,7 +11,7 @@ WP Nav Plus fills gaps in the WordPress menu system. Use for split menus, divide
 
 == Description ==
 
-WP Nav Plus has been designed to fill gaps in the WordPress menu system which make it difficult to accomplish many popular website design patterns. This is a tool built for developers to help get the right menu items output onto the page. This plugin applies no additional CSS styling or JS interaction to menus. Styling and interaction are the job of the theme, and may need to be altered to achieve your desired appearance.
+WP Nav Plus has been designed to fill gaps in the WordPress menu system which make it difficult to accomplish many popular website design patterns. **This is a tool built for developers** to help get the right menu items output onto the page. This plugin applies no additional CSS styling or JS interaction to menus. Styling and interaction are the job of the theme, and may need to be altered to achieve your desired appearance.
 
 This plugin integrates with the native WordPress [WP Nav Menu function](https://developer.wordpress.org/reference/functions/wp_nav_menu/) which means you can access all of the features of this plugin in your templates. There is also an included widget as an alternative integration method.
 
