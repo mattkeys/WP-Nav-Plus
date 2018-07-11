@@ -2,7 +2,7 @@
 /*
 Plugin Name: WP Nav Plus
 Description: WP Nav Plus provides “missing” functionality from the WordPress menu system. Use WP Nav Plus for split menus, divided menus, menu segments, or to limit and/or offset the menu output.
-Version: 3.4.7
+Version: 3.4.8
 Author: mattkeys
 Author URI: http://mattkeys.me
 License: GPL2

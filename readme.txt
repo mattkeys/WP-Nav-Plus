@@ -57,6 +57,9 @@ For help getting started please see the included documentation in the /documenta
 
 == Changelog ==
 
+= 3.4.8 =
+* Allow for multiple menu classes to be assigned with the widget
+
 = 3.4.7 =
 * WP Nav Plus is no longer a 'premium' plugin and is now open source software available for free to the community through the WordPress plugin repository.
 * Added languages POT file for translation
@@ -148,6 +151,9 @@ For help getting started please see the included documentation in the /documenta
 * This is the first public release
 
 == Upgrade Notice ==
+
+= 3.4.8 =
+Allow for multiple menu classes to be assigned with the widget
 
 = 3.4.7 =
 WP Nav Plus is no longer a 'premium' plugin and is now open source software available for free to the community through the WordPress plugin repository.

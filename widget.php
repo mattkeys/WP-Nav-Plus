@@ -80,7 +80,7 @@ class WP_Nav_Plus_Widget extends WP_Widget {
 	function update( $new_instance, $old_instance )
 	{
 		$instance['title'] 			= sanitize_text_field( $new_instance['title'] );
-		$instance['menu_class'] 	= sanitize_html_class( $new_instance['menu_class'] );
+		$instance['menu_class'] 	= $this->sanitize_menu_classes( $new_instance['menu_class'] );
 		$instance['nav_menu'] 		= (int) $new_instance['nav_menu'];
 		$instance['depth'] 			= (int) $new_instance['depth'];
 		$instance['start_depth'] 	= (int) $new_instance['start_depth'];
@@ -91,6 +91,19 @@ class WP_Nav_Plus_Widget extends WP_Widget {
 		$instance['segment'] 		= sanitize_text_field( $new_instance['segment'] );
 
 		return $instance;
+	}
+
+	function sanitize_menu_classes( $menu_classes, $sanitized_menu_classes = '' )
+	{
+		$menu_classes = explode( ' ', $menu_classes );
+		if ( ! empty( $menu_classes ) ) {
+			foreach ( $menu_classes as $menu_class ) {
+				$sanitized_menu_classes .= sanitize_html_class( $menu_class ) . ' ';
+			}
+			$sanitized_menu_classes = rtrim( $sanitized_menu_classes );
+		}
+
+		return $sanitized_menu_classes;
 	}
 
 	function form( $instance )
@@ -140,6 +153,7 @@ class WP_Nav_Plus_Widget extends WP_Widget {
 			<p>
 				<label for="<?php echo $this->get_field_id('menu_class'); ?>"><?php _e( 'Menu Class:', 'wp-nav-plus' ) ?></label>
 				<input type="text" class="widefat" id="<?php echo $this->get_field_id('menu_class'); ?>" name="<?php echo $this->get_field_name('menu_class'); ?>" value="<?php echo esc_attr( $menu_class ); ?>" />
+				<span class="description"><?php _e( 'Separate multiple classes with spaces', 'wp-nav-plus' ) ?></span>
 			</p>
 			<p>
 				<label for="<?php echo $this->get_field_id('depth'); ?>"><?php _e( 'Depth:', 'wp-nav-plus'); ?></label>
