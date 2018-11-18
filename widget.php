@@ -235,8 +235,11 @@ class WP_Nav_Plus_Widget extends WP_Widget {
 				<select class="segment_options" id="<?php echo $this->get_field_id('segment'); ?>" name="<?php echo $this->get_field_name('segment'); ?>" data-selected-option="<?php echo esc_attr( $segment ); ?>">
 					<option value="" <?php selected( $segment, '' ); ?>><?php _e( 'N/A (disabled)', 'wp-nav-plus' ); ?></option>
 					<?php foreach ( $menu_items as $menu_item ) {
+						if ( $segment && ! is_numeric( $segment ) && $segment == $menu_item->title ) {
+							$segment = $menu_item->object_id;
+						}
 						?>
-						<option value="<?php echo $menu_item->title; ?>" <?php selected( $segment, $menu_item->title ); ?>><?php echo $menu_item->title; ?></option>
+						<option value="<?php echo $menu_item->object_id; ?>" <?php selected( $segment, $menu_item->object_id ); ?>><?php echo $menu_item->title; ?></option>
 					<?php } ?>
 				</select>
 			</p>
@@ -282,4 +285,3 @@ function wp_nav_plus_get_nav_items() {
 	exit;
 }
 add_action( 'wp_ajax_wpnp_get_nav_items', 'wp_nav_plus_get_nav_items' );
-
