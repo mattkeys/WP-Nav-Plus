@@ -57,6 +57,9 @@ For help getting started please see the included documentation in the /documenta
 
 == Changelog ==
 
+= 3.4.9 =
+* Bugfix: Menu segment doesn't work on HTML encoded menu titles, refactored to rely on object IDs instead of title strings
+
 = 3.4.8 =
 * Allow for multiple menu classes to be assigned with the widget
 
@@ -151,6 +154,9 @@ For help getting started please see the included documentation in the /documenta
 * This is the first public release
 
 == Upgrade Notice ==
+
+= 3.4.9 =
+* Bugfix: Menu segment doesn't work on HTML encoded menu titles, refactored to rely on object IDs instead of title strings
 
 = 3.4.8 =
 Allow for multiple menu classes to be assigned with the widget
